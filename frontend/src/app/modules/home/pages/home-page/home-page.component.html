@@ -1,0 +1,33 @@
+<div class="flex flex-col h-screen w-full">
+
+
+    <div class="w-full h-1/14 bg-red-200">
+        <p>este es el header</p>
+    </div>
+
+    <div class="flex flex-1 w-full">
+
+        <div [style.width.%]="sidebarLeftRatio * 100" class="panel-left bg-green-200 relative">
+            <p>este es el panel izquierdo</p>
+            <div class="absolute top-0 right-0 w-1 h-full cursor-col-resize bg-gray-600 opacity-40 hover:opacity-80 z-10"
+                (mousedown)="startResizeLeft($event)">
+            </div>
+        </div>
+
+        <div class="center bg-green-300 flex-1">
+            <p>este el panel central</p>
+        </div>
+
+        <div [style.width.%]="sidebarRightRatio * 100" class="panel-rigt bg-green-400 relative">
+            <p>este el panel derecho</p>
+            <div class="absolute top-0 left-0 w-1 h-full cursor-col-resize bg-gray-600 opacity-40 hover:opacity-80 z-10"
+                (mousedown)="startResizeRight($event)">
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full h-1/14 bg-red-200">
+        <p>este es el repodructor</p>
+    </div>
+
+</div>
